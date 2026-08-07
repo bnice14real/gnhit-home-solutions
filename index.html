@@ -14,6 +14,10 @@
         .services { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin: 3rem 0; }
         .service-card { border: 1px solid #ddd; padding: 1.5rem; border-radius: 8px; }
         .experience { background: #f7fafc; padding: 2rem; border-radius: 8px; text-align: center; margin: 2rem 0; }
+        .google-section { background: #e8f5e9; padding: 2rem; border-radius: 8px; margin: 2rem 0; }
+        .google-links { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 1rem; }
+        .google-link { display: inline-block; background: #4285f4; color: white; padding: 0.75rem 1.5rem; border-radius: 4px; text-decoration: none; font-weight: bold; }
+        .google-link:hover { background: #3367d6; }
         footer { background: #1a365d; color: white; text-align: center; padding: 1rem; }
     </style>
 </head>
@@ -25,6 +29,7 @@
     <nav>
         <a href="#services">Services</a>
         <a href="#about">About</a>
+        <a href="#google">Google for Business</a>
         <a href="#contact">Contact</a>
     </nav>
     <section class="hero">
@@ -60,6 +65,16 @@
         <section id="about" class="experience">
             <h2>25 Years of Experience</h2>
             <p>With a quarter century of hands-on expertise, we deliver trusted, reliable IT solutions that businesses and families have depended on since 2001.</p>
+        </section>
+        <section id="google" class="google-section">
+            <h2>Google for Business Solutions</h2>
+            <p>We help businesses get set up and optimized with Google's powerful tools. From listing your business on Google to professional email and collaboration suites, we've got you covered.</p>
+            <div class="google-links">
+                <a href="https://business.google.com/" target="_blank" class="google-link">Google Business Profile</a>
+                <a href="https://workspace.google.com/business/" target="_blank" class="google-link">Google Workspace</a>
+                <a href="https://business.google.com/us/" target="_blank" class="google-link">Google Business Tools</a>
+            </div>
+            <p style="margin-top: 1rem; font-size: 0.95rem;">Need help setting up Google Workspace, Google Business Profile, or other Google tools? Contact us for expert assistance.</p>
         </section>
         <section id="contact">
             <h2>Get In Touch</h2>
