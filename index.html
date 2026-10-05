@@ -1,88 +1,928 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>G & H IT and Home Solutions</title>
-    <style>
-        body { font-family: Arial, sans-serif; margin: 0; padding: 0; line-height: 1.6; color: #333; }
-        header { background: #1a365d; color: white; padding: 1rem 0; text-align: center; }
-        nav { background: #2c5282; padding: 0.5rem; }
-        nav a { color: white; margin: 0 1rem; text-decoration: none; }
-        .container { max-width: 1200px; margin: 0 auto; padding: 2rem; }
-        .hero { background: linear-gradient(rgba(26,54,93,0.9), rgba(44,82,130,0.9)), url('https://picsum.photos/id/1015/2000/1200'); background-size: cover; color: white; padding: 4rem 2rem; text-align: center; }
-        .services { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin: 3rem 0; }
-        .service-card { border: 1px solid #ddd; padding: 1.5rem; border-radius: 8px; }
-        .experience { background: #f7fafc; padding: 2rem; border-radius: 8px; text-align: center; margin: 2rem 0; }
-        .google-section { background: #e8f5e9; padding: 2rem; border-radius: 8px; margin: 2rem 0; }
-        .google-links { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 1rem; }
-        .google-link { display: inline-block; background: #4285f4; color: white; padding: 0.75rem 1.5rem; border-radius: 4px; text-decoration: none; font-weight: bold; }
-        .google-link:hover { background: #3367d6; }
-        footer { background: #1a365d; color: white; text-align: center; padding: 1rem; }
-    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>G &amp; H IT and Home Solutions</title>
+  <meta name="description" content="G &amp; H IT and Home Solutions. Cloud infrastructure, network administration, firewall installation, DVR support, and 24/7 security monitoring for homes and businesses. Since 2001.">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Public+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #17212b;
+      --ink-soft: #3e4a55;
+      --paper: #f3eee6;
+      --paper-2: #faf7f2;
+      --line: #d9d0c3;
+      --copper: #c4622d;
+      --copper-ink: #fff8f3;
+      --copper-deep: #8c4218;
+      --muted: #5e6872;
+      --warn: #8c2f24;
+      --shadow: 0 1px 0 rgba(23, 33, 43, 0.06);
+      --sans: "Public Sans", "Segoe UI", sans-serif;
+      --display: "Barlow Condensed", "Arial Narrow", sans-serif;
+      --max: 1120px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: var(--sans);
+      font-size: 1.0625rem;
+      line-height: 1.55;
+    }
+    img, svg { max-width: 100%; }
+    a { color: var(--copper-deep); }
+    a:hover { color: var(--ink); }
+    :focus-visible {
+      outline: 2px solid var(--copper);
+      outline-offset: 3px;
+    }
+    .skip {
+      position: absolute;
+      left: 12px;
+      top: -40px;
+      background: var(--ink);
+      color: var(--paper);
+      padding: 8px 12px;
+      z-index: 20;
+    }
+    .skip:focus { top: 12px; }
+    .wrap { width: min(var(--max), calc(100% - 32px)); margin: 0 auto; }
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      align-items: center;
+      padding: 10px 0;
+      border-bottom: 1px solid var(--line);
+      font-family: var(--display);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-size: 0.95rem;
+      color: var(--muted);
+    }
+    .topbar strong { color: var(--ink); font-weight: 600; }
+    header.site {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(243, 238, 230, 0.94);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--line);
+    }
+    .navrow {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      min-height: 72px;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: inherit;
+    }
+    .mark {
+      width: 44px;
+      height: 44px;
+      border: 1.5px solid var(--ink);
+      display: grid;
+      place-items: center;
+      font-family: var(--display);
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      background: var(--ink);
+      color: var(--paper);
+    }
+    .brand-name { display: flex; flex-direction: column; line-height: 1; }
+    .brand-name b {
+      font-family: var(--display);
+      font-size: 1.7rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+    }
+    .brand-name span {
+      margin-top: 3px;
+      font-size: 0.78rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    .nav-toggle {
+      min-height: 44px;
+      min-width: 44px;
+      border: 1px solid var(--ink);
+      background: transparent;
+      font-family: var(--display);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-size: 1rem;
+    }
+    nav[data-nav] {
+      display: none;
+      padding-bottom: 14px;
+    }
+    nav[data-nav].is-open { display: block; }
+    nav[data-nav] a {
+      display: flex;
+      align-items: center;
+      min-height: 44px;
+      text-decoration: none;
+      color: var(--ink);
+      border-top: 1px solid var(--line);
+      font-family: var(--display);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      font-size: 1.15rem;
+    }
+    .hero {
+      display: grid;
+      gap: 28px;
+      padding: 36px 0 12px;
+    }
+    .kicker {
+      font-family: var(--display);
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--copper-deep);
+      margin: 0 0 8px;
+      font-size: 1.05rem;
+    }
+    h1 {
+      font-family: var(--display);
+      font-weight: 600;
+      font-size: clamp(2.6rem, 8vw, 4.6rem);
+      line-height: 0.92;
+      letter-spacing: -0.01em;
+      margin: 0 0 16px;
+    }
+    .lede { font-size: 1.15rem; max-width: 38rem; margin: 0 0 22px; color: var(--ink-soft); }
+    .actions { display: flex; flex-wrap: wrap; gap: 10px; }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 0 18px;
+      border: 1px solid var(--ink);
+      background: var(--ink);
+      color: var(--paper);
+      text-decoration: none;
+      font-family: var(--display);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-size: 1.15rem;
+      cursor: pointer;
+    }
+    .btn.secondary { background: transparent; color: var(--ink); }
+    .btn.copper { background: var(--copper); border-color: var(--copper-deep); color: var(--copper-ink); }
+    .btn:hover { transform: none; filter: brightness(1.05); }
+    .desk {
+      background: var(--ink);
+      color: var(--paper);
+      padding: 18px 18px 8px;
+      box-shadow: var(--shadow);
+    }
+    .desk header {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      align-items: baseline;
+      border-bottom: 1px solid rgba(243, 238, 230, 0.2);
+      padding-bottom: 10px;
+      margin-bottom: 8px;
+    }
+    .desk header p { margin: 0; font-family: var(--display); letter-spacing: 0.12em; text-transform: uppercase; color: #e7b089; }
+    .desk time { font-family: var(--display); font-size: 1.8rem; letter-spacing: 0.04em; }
+    .desk ul { list-style: none; margin: 0; padding: 0; }
+    .desk li {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 11px 0;
+      border-bottom: 1px solid rgba(243, 238, 230, 0.14);
+      font-size: 0.98rem;
+    }
+    .desk li span { color: #c9d0d6; }
+    .desk li b { font-weight: 600; text-align: right; }
+    .section { padding: 56px 0; }
+    .section h2 {
+      font-family: var(--display);
+      font-size: clamp(2.1rem, 5vw, 3.2rem);
+      line-height: 0.95;
+      font-weight: 600;
+      margin: 0 0 8px;
+    }
+    .sub { color: var(--ink-soft); max-width: 40rem; margin: 0 0 22px; }
+    .filters { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 14px; }
+    .filters button {
+      min-height: 44px;
+      padding: 0 14px;
+      border: 1px solid var(--line);
+      background: var(--paper-2);
+      font-family: var(--display);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-size: 1.05rem;
+      color: var(--ink);
+      cursor: pointer;
+    }
+    .filters button[aria-pressed="true"] {
+      background: var(--ink);
+      color: var(--paper);
+      border-color: var(--ink);
+    }
+    .ledger { border-top: 1px solid var(--ink); }
+    details.service {
+      border-bottom: 1px solid var(--line);
+      background: transparent;
+    }
+    details.service summary {
+      list-style: none;
+      cursor: pointer;
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 8px 14px;
+      padding: 16px 0;
+      min-height: 44px;
+      align-items: baseline;
+    }
+    details.service summary::-webkit-details-marker { display: none; }
+    .num {
+      font-family: var(--display);
+      color: var(--copper-deep);
+      font-size: 1.25rem;
+      letter-spacing: 0.06em;
+    }
+    details.service h3 {
+      margin: 0;
+      font-family: var(--display);
+      font-size: 1.7rem;
+      font-weight: 600;
+      letter-spacing: 0.01em;
+      line-height: 1;
+    }
+    .blurb { grid-column: 2; margin: 0; color: var(--ink-soft); }
+    .detail {
+      padding: 0 0 18px 0;
+      display: grid;
+      gap: 14px;
+    }
+    .detail ul { margin: 0; padding-left: 1.1rem; }
+    .detail li { margin: 4px 0; }
+    .tag {
+      display: inline-block;
+      font-family: var(--display);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+    .band {
+      background: var(--ink);
+      color: var(--paper);
+    }
+    .band h2 { color: var(--paper); }
+    .band .sub { color: #c9d0d6; }
+    .steps {
+      display: grid;
+      gap: 0;
+      border-top: 1px solid rgba(243, 238, 230, 0.25);
+    }
+    .step { padding: 16px 0; border-bottom: 1px solid rgba(243, 238, 230, 0.18); }
+    .step b {
+      display: block;
+      font-family: var(--display);
+      font-size: 1.5rem;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+    }
+    .step span { color: #e7b089; font-family: var(--display); letter-spacing: 0.12em; }
+    .split {
+      display: grid;
+      gap: 22px;
+    }
+    .panel {
+      background: var(--paper-2);
+      border: 1px solid var(--line);
+      padding: 18px;
+    }
+    .panel h3 {
+      font-family: var(--display);
+      font-size: 2rem;
+      margin: 0 0 8px;
+      font-weight: 600;
+    }
+    .watch {
+      display: grid;
+      gap: 18px;
+    }
+    .watch article {
+      border-top: 2px solid var(--copper);
+      padding-top: 10px;
+    }
+    .watch h3 {
+      font-family: var(--display);
+      font-size: 1.8rem;
+      margin: 0 0 6px;
+      font-weight: 600;
+    }
+    form.scope {
+      display: grid;
+      gap: 16px;
+      background: var(--paper-2);
+      border: 1px solid var(--ink);
+      padding: 18px;
+    }
+    fieldset {
+      border: 0;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      gap: 8px;
+    }
+    legend {
+      font-family: var(--display);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-size: 1.15rem;
+      padding: 0;
+      margin-bottom: 4px;
+    }
+    label.row {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      min-height: 44px;
+      padding-top: 8px;
+    }
+    label.field { display: grid; gap: 6px; font-size: 0.95rem; }
+    input, select, textarea {
+      width: 100%;
+      min-height: 48px;
+      border: 1px solid var(--line);
+      background: white;
+      color: var(--ink);
+      font: inherit;
+      padding: 10px 12px;
+    }
+    textarea { min-height: 96px; resize: vertical; }
+    .grid-2 { display: grid; gap: 12px; }
+    .warn { color: var(--warn); margin: 0; }
+    .result {
+      border-top: 1px solid var(--line);
+      padding-top: 12px;
+    }
+    .result h3 { font-family: var(--display); font-size: 1.8rem; margin: 0 0 6px; }
+    pre {
+      white-space: pre-wrap;
+      word-break: break-word;
+      background: var(--ink);
+      color: var(--paper);
+      padding: 14px;
+      margin: 10px 0 0;
+      font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+      font-size: 0.92rem;
+      line-height: 1.45;
+    }
+    .links { display: flex; flex-wrap: wrap; gap: 8px; }
+    .links a {
+      min-height: 44px;
+      display: inline-flex;
+      align-items: center;
+      padding: 0 12px;
+      border: 1px solid var(--line);
+      text-decoration: none;
+      color: var(--ink);
+      background: var(--paper-2);
+    }
+    footer {
+      border-top: 1px solid var(--ink);
+      padding: 22px 0 40px;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+    footer .brand-name b { font-size: 1.4rem; }
+    @media (min-width: 800px) {
+      .nav-toggle { display: none; }
+      nav[data-nav] {
+        display: flex;
+        gap: 18px;
+        padding: 0;
+      }
+      nav[data-nav] a { border: 0; min-height: 44px; font-size: 1.05rem; }
+      .hero { grid-template-columns: 1.2fr 0.8fr; align-items: end; padding-top: 54px; }
+      .steps { grid-template-columns: repeat(4, 1fr); }
+      .step { padding-right: 18px; border-bottom: 0; border-right: 1px solid rgba(243, 238, 230, 0.18); }
+      .step:last-child { border-right: 0; }
+      .split { grid-template-columns: 1.2fr 0.8fr; }
+      .watch { grid-template-columns: repeat(3, 1fr); }
+      .grid-2 { grid-template-columns: 1fr 1fr; }
+      .detail { grid-template-columns: 1.2fr 0.8fr; padding-left: 42px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      * { transition: none !important; animation: none !important; }
+    }
+    @media print {
+      header.site, .topbar, .filters, .actions, form.scope button { display: none !important; }
+      body { background: white; }
+      .desk, pre { color: black; background: white; }
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>G & H IT and Home Solutions</h1>
-        <p>Professional IT Services Since 2001</p>
-    </header>
-    <nav>
+  <a class="skip" href="#main">Skip to content</a>
+  <div class="wrap topbar">
+    <span>Since <strong>2001</strong></span>
+    <span>Desk <strong>staffed 24/7</strong></span>
+  </div>
+  <header class="site">
+    <div class="wrap navrow">
+      <a class="brand" href="#top">
+        <span class="mark">GH</span>
+        <span class="brand-name">
+          <b>G &amp; H</b>
+          <span>IT and Home Solutions</span>
+        </span>
+      </a>
+      <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <nav id="site-nav" data-nav aria-label="Primary">
         <a href="#services">Services</a>
-        <a href="#about">About</a>
-        <a href="#google">Google for Business</a>
-        <a href="#contact">Contact</a>
-    </nav>
-    <section class="hero">
-        <h2>25 Years of IT Excellence</h2>
-        <p>Reliable technology solutions for your home and business</p>
-    </section>
-    <div class="container">
-        <section id="services">
-            <h2>Our Services</h2>
-            <div class="services">
-                <div class="service-card">
-                    <h3>Managed Service Provider</h3>
-                    <p>Proactive IT management, monitoring, and support to keep your systems running smoothly.</p>
-                </div>
-                <div class="service-card">
-                    <h3>Networking Solutions & Infrastructure</h3>
-                    <p>Design, installation, and maintenance of robust network infrastructure for homes and businesses.</p>
-                </div>
-                <div class="service-card">
-                    <h3>Laptop Hardware Repairs</h3>
-                    <p>Expert diagnosis and repair of basic to complex laptop hardware issues.</p>
-                </div>
-                <div class="service-card">
-                    <h3>DVR Installation</h3>
-                    <p>Professional setup and configuration of digital video recording systems for security.</p>
-                </div>
-                <div class="service-card">
-                    <h3>Procurement</h3>
-                    <p>Sourcing and purchasing quality IT equipment and technology solutions tailored to your needs.</p>
-                </div>
-            </div>
-        </section>
-        <section id="about" class="experience">
-            <h2>25 Years of Experience</h2>
-            <p>With a quarter century of hands-on expertise, we deliver trusted, reliable IT solutions that businesses and families have depended on since 2001.</p>
-        </section>
-        <section id="google" class="google-section">
-            <h2>Google for Business Solutions</h2>
-            <p>We help businesses get set up and optimized with Google's powerful tools. From listing your business on Google to professional email and collaboration suites, we've got you covered.</p>
-            <div class="google-links">
-                <a href="https://business.google.com/" target="_blank" class="google-link">Google Business Profile</a>
-                <a href="https://workspace.google.com/business/" target="_blank" class="google-link">Google Workspace</a>
-                <a href="https://business.google.com/us/" target="_blank" class="google-link">Google Business Tools</a>
-            </div>
-            <p style="margin-top: 1rem; font-size: 0.95rem;">Need help setting up Google Workspace, Google Business Profile, or other Google tools? Contact us for expert assistance.</p>
-        </section>
-        <section id="contact">
-            <h2>Get In Touch</h2>
-            <p>Ready to solve your IT challenges? Contact us today for a consultation.</p>
-        </section>
+        <a href="#monitoring">24/7 desk</a>
+        <a href="#scope">Request a visit</a>
+        <a href="#google">Google</a>
+      </nav>
     </div>
-    <footer>
-        <p>&copy; 2026 G & H IT and Home Solutions. All rights reserved.</p>
-    </footer>
+  </header>
+  <main id="main">
+    <div class="wrap hero" id="top">
+      <div>
+        <p class="kicker">Homes and businesses</p>
+        <h1>Infrastructure, installed and watched.</h1>
+        <p class="lede">Cloud, networks, firewalls, cameras, and a desk that does not close. We put the gear in, write the rules, and stay on the line overnight.</p>
+        <div class="actions">
+          <a class="btn copper" href="#scope">Scope a visit</a>
+          <a class="btn secondary" href="#services">All services</a>
+        </div>
+      </div>
+      <aside class="desk" aria-label="Monitoring desk">
+        <header>
+          <p>Night desk</p>
+          <time data-clock>--:--</time>
+        </header>
+        <ul>
+          <li><span>Cloud</span><b>Build &amp; run</b></li>
+          <li><span>Networks</span><b>Administered</b></li>
+          <li><span>Firewalls</span><b>Installed &amp; ruled</b></li>
+          <li><span>DVR / NVR</span><b>Install &amp; support</b></li>
+          <li><span>Security watch</span><b>24 hours</b></li>
+        </ul>
+      </aside>
+    </div>
+
+    <section class="section" id="services">
+      <div class="wrap">
+        <h2>The work, by name.</h2>
+        <p class="sub">Five practices carry the night shift. The rest is the bench, the buying, and the day-to-day management homes and offices actually call about.</p>
+        <div class="filters" role="group" aria-label="Filter services">
+          <button type="button" data-filter="all" aria-pressed="true">All</button>
+          <button type="button" data-filter="security" aria-pressed="false">Security</button>
+          <button type="button" data-filter="infrastructure" aria-pressed="false">Infrastructure</button>
+          <button type="button" data-filter="home" aria-pressed="false">Home</button>
+        </div>
+        <div class="ledger">
+          <details class="service" data-service data-group="infrastructure" open>
+            <summary>
+              <span class="num">01</span>
+              <h3>Cloud infrastructure</h3>
+              <p class="blurb">Mail, files, servers, and backups that restore when you need them.</p>
+            </summary>
+            <div class="detail">
+              <div>
+                <p>We design and run the hosted side of the business: Microsoft 365 or Google Workspace, file shares, identity with MFA, and servers that used to live in a closet. Public cloud, a private box, or a mix. The test is a restore, not a diagram.</p>
+                <ul>
+                  <li>Tenant setup, migration, and shared drives</li>
+                  <li>Backup jobs with a restore check on the calendar</li>
+                  <li>Accounts, MFA, and who can reach what</li>
+                  <li>Cutover planned around the hours you are open</li>
+                </ul>
+              </div>
+              <p class="tag">Infrastructure</p>
+            </div>
+          </details>
+          <details class="service" data-service data-group="infrastructure">
+            <summary>
+              <span class="num">02</span>
+              <h3>Network administration</h3>
+              <p class="blurb">Switching, Wi-Fi, cabling, and someone who still knows the password list.</p>
+            </summary>
+            <div class="detail">
+              <div>
+                <p>A network is not a router from a big-box shelf. We survey the site, pull or tidy cable, place access points where people actually sit, and separate staff, guests, cameras, and point-of-sale. Then we stay on as the administrator.</p>
+                <ul>
+                  <li>Switching, VLANs, and Wi-Fi that covers the building</li>
+                  <li>Cabling and closet cleanup</li>
+                  <li>Documentation you can hand to the next person</li>
+                  <li>Changes made on purpose, not by whoever is nearest the rack</li>
+                </ul>
+              </div>
+              <p class="tag">Infrastructure</p>
+            </div>
+          </details>
+          <details class="service" data-service data-group="security">
+            <summary>
+              <span class="num">03</span>
+              <h3>Firewall installation &amp; configuration</h3>
+              <p class="blurb">The appliance, the rules, the VPN, and a log someone reads.</p>
+            </summary>
+            <div class="detail">
+              <div>
+                <p>We install or replace the firewall, then write rules that match how the site works. Guest Wi-Fi does not touch the office. Remote staff get a VPN. Logging feeds the night desk. We work with Fortinet, SonicWall, Ubiquiti, and the box you already own when it is still the right box.</p>
+                <ul>
+                  <li>Install, swap, and harden</li>
+                  <li>Rule review so "allow any" does not survive the visit</li>
+                  <li>Site-to-site and remote-user VPN</li>
+                  <li>Change notes, not a mystery config</li>
+                </ul>
+              </div>
+              <p class="tag">Security</p>
+            </div>
+          </details>
+          <details class="service" data-service data-group="security">
+            <summary>
+              <span class="num">04</span>
+              <h3>DVR installation &amp; support</h3>
+              <p class="blurb">Cameras aimed at the door, the till, and the lot. Then we keep them recording.</p>
+            </summary>
+            <div class="detail">
+              <div>
+                <p>Placement first, then the recorder. DVR or NVR, retention set to something you can actually use, remote viewing only for the people who should have it. Support means a dark channel gets a person, not a shrug.</p>
+                <ul>
+                  <li>Camera layout for entries, counters, lots, and stock rooms</li>
+                  <li>Recorder setup, storage, and time sync</li>
+                  <li>Remote view without leaving the admin password on a sticky note</li>
+                  <li>Repair and replacement when a camera or disk fails</li>
+                </ul>
+              </div>
+              <p class="tag">Security</p>
+            </div>
+          </details>
+          <details class="service" data-service data-group="security">
+            <summary>
+              <span class="num">05</span>
+              <h3>24/7 security monitoring</h3>
+              <p class="blurb">Alerts from the firewall, the servers, the backups, and the recorder. Overnight included.</p>
+            </summary>
+            <div class="detail">
+              <div>
+                <p>Monitoring is a shift, not a sticker. Critical alerts are worked as they arrive, including nights and weekends. We confirm the alert is real, follow the runbook you approved, and leave a morning note of what changed.</p>
+                <ul>
+                  <li>Firewall, VPN, and server health</li>
+                  <li>Backup failures and cloud sign-in trouble</li>
+                  <li>NVR or DVR offline, disk warnings, camera loss</li>
+                  <li>After-hours lockouts for people who are supposed to be in</li>
+                </ul>
+              </div>
+              <p class="tag">Security</p>
+            </div>
+          </details>
+          <details class="service" data-service data-group="infrastructure">
+            <summary>
+              <span class="num">06</span>
+              <h3>Managed IT</h3>
+              <p class="blurb">One desk for the systems you do not want to babysit.</p>
+            </summary>
+            <div class="detail">
+              <div>
+                <p>Managed service is the ongoing contract: patching posture, user changes, vendor calls, and a person who already knows the site. It sits on top of the network, cloud, and security work instead of replacing them.</p>
+                <ul>
+                  <li>User adds, removals, and password trouble</li>
+                  <li>Vendor coordination when a line or app is down</li>
+                  <li>A written picture of what you own</li>
+                </ul>
+              </div>
+              <p class="tag">Infrastructure</p>
+            </div>
+          </details>
+          <details class="service" data-service data-group="home">
+            <summary>
+              <span class="num">07</span>
+              <h3>Laptop hardware repair</h3>
+              <p class="blurb">Screens, keyboards, power, and storage. Bench work for home machines.</p>
+            </summary>
+            <div class="detail">
+              <div>
+                <p>We diagnose before we replace. If the board is finished, we say so. If a drive can be saved, we pull the files first.</p>
+                <ul>
+                  <li>Power, display, keyboard, and storage</li>
+                  <li>Data copied off before a risky repair</li>
+                  <li>Home machines and small-office laptops</li>
+                </ul>
+              </div>
+              <p class="tag">Home</p>
+            </div>
+          </details>
+          <details class="service" data-service data-group="infrastructure">
+            <summary>
+              <span class="num">08</span>
+              <h3>Procurement</h3>
+              <p class="blurb">The right box the first time, with a warranty you can use.</p>
+            </summary>
+            <div class="detail">
+              <div>
+                <p>We spec and buy firewalls, switches, cameras, recorders, and PCs against the site, not against a weekly ad. You get the model, the reason, and where the warranty lives.</p>
+              </div>
+              <p class="tag">Infrastructure</p>
+            </div>
+          </details>
+          <details class="service" data-service data-group="infrastructure">
+            <summary>
+              <span class="num">09</span>
+              <h3>Google for business</h3>
+              <p class="blurb">Workspace, the business profile, and mail that arrives at a real domain.</p>
+            </summary>
+            <div class="detail">
+              <div>
+                <p>We set up Google Workspace and a Google Business Profile without leaving the admin account in one person's personal Gmail. See the Google section for the official pages.</p>
+              </div>
+              <p class="tag">Infrastructure</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section band" id="method">
+      <div class="wrap">
+        <h2>How a site gets stood up.</h2>
+        <p class="sub">Four passes. We do not skip the last one and call it finished.</p>
+        <div class="steps">
+          <div class="step"><span>01</span><b>Walk the site</b><p>Closet, cameras, internet handoff, who works late, what must not go down.</p></div>
+          <div class="step"><span>02</span><b>Install</b><p>Cable, rack, firewall, recorder, cloud tenant. Labeled, not piled.</p></div>
+          <div class="step"><span>03</span><b>Harden</b><p>Rules, MFA, guest split, passwords off the sticky note, backups proven.</p></div>
+          <div class="step"><span>04</span><b>Watch</b><p>Alerts on the 24/7 desk. A runbook. A note in the morning if the night was busy.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="monitoring">
+      <div class="wrap">
+        <h2>What the night shift actually does.</h2>
+        <p class="sub">You should know who is awake. This is the shift, not a slogan.</p>
+        <div class="watch">
+          <article>
+            <h3>Watch</h3>
+            <p>Firewall drops, VPN failures, server and cloud alerts, backup jobs that did not finish, recorders that stop talking, disks that are filling up.</p>
+          </article>
+          <article>
+            <h3>Confirm</h3>
+            <p>We check whether it is a flap or a real outage before we wake you. Noise stays on the desk. A dark shop, a dead till network, or a recorder that stopped does not.</p>
+          </article>
+          <article>
+            <h3>Act</h3>
+            <p>We follow the runbook you signed: restart, fail over, call you, or call the carrier. In the morning you get what changed, not a blank ticket.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="who">
+      <div class="wrap split">
+        <div class="panel">
+          <h3>Business sites</h3>
+          <p>Offices, shops, and more than one location. Firewall, staff Wi-Fi, cameras on the doors and the counter, cloud mail, and overnight monitoring on the same contract.</p>
+          <p>Multi-site work means the same rules in each closet, not a different password taped inside each door.</p>
+        </div>
+        <div class="panel">
+          <h3>Homes</h3>
+          <p>Wi-Fi that reaches the back room, a camera system you can open without a tutorial, laptop repair on the bench, and help buying the next machine.</p>
+          <p>Home jobs do not need a night desk unless you want the recorder watched. Say so on the request.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="scope">
+      <div class="wrap">
+        <h2>Request a site visit.</h2>
+        <p class="sub">Pick the work. Leave a name and phone. You get a written request on this device you can copy into a call, a text, or an email. Nothing is sent to a server from this page.</p>
+        <form class="scope" data-scope>
+          <fieldset>
+            <legend>Services</legend>
+            <label class="row"><input type="checkbox" name="service" value="Cloud infrastructure"> Cloud infrastructure</label>
+            <label class="row"><input type="checkbox" name="service" value="Network administration"> Network administration</label>
+            <label class="row"><input type="checkbox" name="service" value="Firewall installation and configuration"> Firewall installation and configuration</label>
+            <label class="row"><input type="checkbox" name="service" value="DVR installation and support"> DVR installation and support</label>
+            <label class="row"><input type="checkbox" name="service" value="24/7 security monitoring"> 24/7 security monitoring</label>
+            <label class="row"><input type="checkbox" name="service" value="Managed IT"> Managed IT</label>
+            <label class="row"><input type="checkbox" name="service" value="Laptop repair"> Laptop repair</label>
+            <label class="row"><input type="checkbox" name="service" value="Procurement"> Procurement</label>
+            <label class="row"><input type="checkbox" name="service" value="Google Workspace"> Google Workspace</label>
+          </fieldset>
+          <div class="grid-2">
+            <label class="field">Site
+              <select name="kind">
+                <option value="Home">Home</option>
+                <option value="Single business site" selected>Single business site</option>
+                <option value="Multiple business sites">Multiple business sites</option>
+              </select>
+            </label>
+            <label class="field">Rough size
+              <select name="size">
+                <option value="A few people or rooms">A few people or rooms</option>
+                <option value="About 10 to 40 people">About 10 to 40 people</option>
+                <option value="Larger, or more than one address">Larger, or more than one address</option>
+                <option value="Not sure yet">Not sure yet</option>
+              </select>
+            </label>
+            <label class="field">Name
+              <input name="name" autocomplete="name" required>
+            </label>
+            <label class="field">Phone
+              <input name="phone" type="tel" autocomplete="tel" required>
+            </label>
+            <label class="field">Email (optional)
+              <input name="email" type="email" autocomplete="email">
+            </label>
+            <label class="field">Town or area
+              <input name="place" autocomplete="address-level2">
+            </label>
+          </div>
+          <fieldset>
+            <legend>Coverage</legend>
+            <label class="row"><input type="radio" name="hours" value="Business hours support" checked> Business hours support</label>
+            <label class="row"><input type="radio" name="hours" value="24/7 security monitoring"> Add the 24/7 desk</label>
+          </fieldset>
+          <label class="field">What is going wrong, or what you want installed
+            <textarea name="notes" placeholder="Example: four cameras out, guest Wi-Fi on the same network as the register, mail still on an old server."></textarea>
+          </label>
+          <div class="actions">
+            <button class="btn copper" type="submit">Build the request</button>
+            <button class="btn secondary" type="button" data-copy hidden>Copy request</button>
+          </div>
+          <div class="result" data-scope-out hidden></div>
+        </form>
+      </div>
+    </section>
+
+    <section class="section" id="google">
+      <div class="wrap">
+        <h2>Google, set up properly.</h2>
+        <p class="sub">We help with the business profile and Workspace. These open Google's own pages.</p>
+        <div class="links">
+          <a href="https://business.google.com/" target="_blank" rel="noopener noreferrer">Google Business Profile</a>
+          <a href="https://workspace.google.com/business/" target="_blank" rel="noopener noreferrer">Google Workspace</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="wrap">
+      <div class="brand-name"><b>G &amp; H IT and Home Solutions</b></div>
+      <p>Since 2001. Cloud, networks, firewalls, cameras, repairs, and a monitoring desk that does not clock out.</p>
+      <p>Put your dispatch phone and email on this line when you want customers to call direct. Until then, the request form builds a brief they can hand you.</p>
+    </div>
+  </footer>
+  <script>
+    (function () {
+      var toggle = document.querySelector("[data-nav-toggle]");
+      var nav = document.querySelector("[data-nav]");
+      if (toggle && nav) {
+        toggle.addEventListener("click", function () {
+          var open = nav.classList.toggle("is-open");
+          toggle.setAttribute("aria-expanded", open ? "true" : "false");
+          toggle.textContent = open ? "Close" : "Menu";
+        });
+        nav.addEventListener("click", function (event) {
+          if (event.target.closest("a")) {
+            nav.classList.remove("is-open");
+            toggle.setAttribute("aria-expanded", "false");
+            toggle.textContent = "Menu";
+          }
+        });
+      }
+
+      var filters = document.querySelectorAll("[data-filter]");
+      filters.forEach(function (btn) {
+        btn.addEventListener("click", function () {
+          var group = btn.getAttribute("data-filter");
+          filters.forEach(function (b) {
+            b.setAttribute("aria-pressed", b === btn ? "true" : "false");
+          });
+          document.querySelectorAll("[data-service]").forEach(function (row) {
+            var g = row.getAttribute("data-group");
+            var show = group === "all" || g === group;
+            row.hidden = !show;
+            if (!show) row.open = false;
+          });
+        });
+      });
+
+      var clock = document.querySelector("[data-clock]");
+      function tick() {
+        if (!clock) return;
+        clock.textContent = new Date().toLocaleTimeString([], { hour: "numeric", minute: "2-digit" });
+        clock.setAttribute("datetime", new Date().toISOString());
+      }
+      tick();
+      setInterval(tick, 15000);
+
+      var form = document.querySelector("[data-scope]");
+      var out = document.querySelector("[data-scope-out]");
+      var copyBtn = document.querySelector("[data-copy]");
+      var lastText = "";
+
+      function showResult(text, intro) {
+        lastText = text;
+        out.hidden = false;
+        out.textContent = "";
+        var h = document.createElement("h3");
+        h.textContent = "Request ready";
+        var p = document.createElement("p");
+        p.textContent = intro;
+        var pre = document.createElement("pre");
+        pre.textContent = text;
+        out.appendChild(h);
+        out.appendChild(p);
+        out.appendChild(pre);
+        if (copyBtn) copyBtn.hidden = false;
+      }
+
+      function showWarn(message) {
+        out.hidden = false;
+        out.textContent = "";
+        var p = document.createElement("p");
+        p.className = "warn";
+        p.textContent = message;
+        out.appendChild(p);
+        if (copyBtn) copyBtn.hidden = true;
+      }
+
+      try {
+        var saved = localStorage.getItem("gnh-request");
+        if (saved) showResult(saved, "Saved on this browser from your last visit. Copy it when you are ready to send.");
+      } catch (err) {}
+
+      if (copyBtn) {
+        copyBtn.addEventListener("click", function () {
+          if (!lastText) return;
+          if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(lastText).then(function () {
+              copyBtn.textContent = "Copied";
+            }).catch(function () {
+              copyBtn.textContent = "Select the brief to copy";
+            });
+          } else {
+            copyBtn.textContent = "Select the brief to copy";
+          }
+        });
+      }
+
+      if (!form) return;
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
+        var data = new FormData(form);
+        var services = data.getAll("service");
+        if (!services.length) {
+          showWarn("Pick at least one service.");
+          return;
+        }
+        var name = String(data.get("name") || "").trim();
+        var phone = String(data.get("phone") || "").trim();
+        if (!name || !phone) {
+          showWarn("Name and phone are required so someone can call you back.");
+          return;
+        }
+        var lines = [
+          "G & H service request",
+          "Name: " + name,
+          "Phone: " + phone
+        ];
+        var email = String(data.get("email") || "").trim();
+        var place = String(data.get("place") || "").trim();
+        var notes = String(data.get("notes") || "").trim();
+        if (email) lines.push("Email: " + email);
+        lines.push("Site: " + String(data.get("kind") || ""));
+        if (place) lines.push("Area: " + place);
+        lines.push("Size: " + String(data.get("size") || ""));
+        lines.push("Coverage: " + String(data.get("hours") || ""));
+        lines.push("Services: " + services.join("; "));
+        if (notes) lines.push("Notes: " + notes);
+        var text = lines.join("\n");
+        try { localStorage.setItem("gnh-request", text); } catch (err) {}
+        showResult(text, "Kept on this device only. Copy it and send it to G & H by phone, text, or email.");
+        if (copyBtn) copyBtn.textContent = "Copy request";
+        out.scrollIntoView({ block: "nearest" });
+      });
+    })();
+  </script>
 </body>
 </html>
