@@ -4,11 +4,21 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>G &amp; H IT and Home Solutions</title>
-  <meta name="description" content="G &amp; H IT and Home Solutions. Cloud infrastructure, network administration, firewall installation, DVR support, and 24/7 security monitoring for homes and businesses. Since 2001.">
+  <meta name="description" content="G &amp; H IT and Home Solutions. Call or text 984-397-6530. Cloud infrastructure, network administration, firewall installation, DVR support, and 24/7 security monitoring for homes and businesses. Since 2001.">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Public+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "G & H IT and Home Solutions",
+    "alternateName": "G&H IT Solutions",
+    "telephone": "+1-984-397-6530",
+    "description": "Cloud infrastructure, network administration, firewall installation, DVR support, and 24/7 security monitoring for homes and businesses."
+  }
+  </script>
   <style>
     :root {
       --ink: #17212b;
@@ -57,7 +67,8 @@
     .topbar {
       display: flex;
       justify-content: space-between;
-      gap: 16px;
+      gap: 12px 18px;
+      flex-wrap: wrap;
       align-items: center;
       padding: 10px 0;
       border-bottom: 1px solid var(--line);
@@ -68,6 +79,8 @@
       color: var(--muted);
     }
     .topbar strong { color: var(--ink); font-weight: 600; }
+    .topbar a { color: inherit; text-decoration: none; }
+    .topbar a:hover { color: var(--copper-deep); }
     header.site {
       position: sticky;
       top: 0;
@@ -191,6 +204,7 @@
       padding: 18px 18px 8px;
       box-shadow: var(--shadow);
     }
+    .desk a { color: #fff8f3; }
     .desk header {
       display: flex;
       justify-content: space-between;
@@ -286,12 +300,10 @@
       font-size: 0.9rem;
       color: var(--muted);
     }
-    .band {
-      background: var(--ink);
-      color: var(--paper);
-    }
+    .band { background: var(--ink); color: var(--paper); }
     .band h2 { color: var(--paper); }
     .band .sub { color: #c9d0d6; }
+    .band a { color: #e7b089; }
     .steps {
       display: grid;
       gap: 0;
@@ -306,10 +318,7 @@
       letter-spacing: 0.03em;
     }
     .step span { color: #e7b089; font-family: var(--display); letter-spacing: 0.12em; }
-    .split {
-      display: grid;
-      gap: 22px;
-    }
+    .split { display: grid; gap: 22px; }
     .panel {
       background: var(--paper-2);
       border: 1px solid var(--line);
@@ -321,14 +330,8 @@
       margin: 0 0 8px;
       font-weight: 600;
     }
-    .watch {
-      display: grid;
-      gap: 18px;
-    }
-    .watch article {
-      border-top: 2px solid var(--copper);
-      padding-top: 10px;
-    }
+    .watch { display: grid; gap: 18px; }
+    .watch article { border-top: 2px solid var(--copper); padding-top: 10px; }
     .watch h3 {
       font-family: var(--display);
       font-size: 1.8rem;
@@ -377,11 +380,11 @@
     textarea { min-height: 96px; resize: vertical; }
     .grid-2 { display: grid; gap: 12px; }
     .warn { color: var(--warn); margin: 0; }
-    .result {
-      border-top: 1px solid var(--line);
-      padding-top: 12px;
-    }
+    .result { border-top: 1px solid var(--line); padding-top: 12px; }
     .result h3 { font-family: var(--display); font-size: 1.8rem; margin: 0 0 6px; }
+    .tickets { margin-top: 8px; }
+    .tickets h3 { font-family: var(--display); font-size: 1.8rem; margin: 0 0 8px; }
+    .tickets ul { margin: 0 0 8px; padding-left: 1.1rem; }
     pre {
       white-space: pre-wrap;
       word-break: break-word;
@@ -411,13 +414,16 @@
       font-size: 0.95rem;
     }
     footer .brand-name b { font-size: 1.4rem; }
+    footer .phone {
+      font-family: var(--display);
+      font-size: 2rem;
+      letter-spacing: 0.04em;
+      color: var(--ink);
+      text-decoration: none;
+    }
     @media (min-width: 800px) {
       .nav-toggle { display: none; }
-      nav[data-nav] {
-        display: flex;
-        gap: 18px;
-        padding: 0;
-      }
+      nav[data-nav] { display: flex; gap: 18px; padding: 0; }
       nav[data-nav] a { border: 0; min-height: 44px; font-size: 1.05rem; }
       .hero { grid-template-columns: 1.2fr 0.8fr; align-items: end; padding-top: 54px; }
       .steps { grid-template-columns: repeat(4, 1fr); }
@@ -443,6 +449,7 @@
   <a class="skip" href="#main">Skip to content</a>
   <div class="wrap topbar">
     <span>Since <strong>2001</strong></span>
+    <a href="tel:+19843976530">Call <strong>984-397-6530</strong></a>
     <span>Desk <strong>staffed 24/7</strong></span>
   </div>
   <header class="site">
@@ -459,7 +466,7 @@
         <a href="#services">Services</a>
         <a href="#monitoring">24/7 desk</a>
         <a href="#scope">Request a visit</a>
-        <a href="#google">Google</a>
+        <a href="tel:+19843976530">984-397-6530</a>
       </nav>
     </div>
   </header>
@@ -470,8 +477,8 @@
         <h1>Infrastructure, installed and watched.</h1>
         <p class="lede">Cloud, networks, firewalls, cameras, and a desk that does not close. We put the gear in, write the rules, and stay on the line overnight.</p>
         <div class="actions">
-          <a class="btn copper" href="#scope">Scope a visit</a>
-          <a class="btn secondary" href="#services">All services</a>
+          <a class="btn copper" href="tel:+19843976530">Call 984-397-6530</a>
+          <a class="btn secondary" href="#scope">Scope a visit</a>
         </div>
       </div>
       <aside class="desk" aria-label="Monitoring desk">
@@ -480,6 +487,7 @@
           <time data-clock>--:--</time>
         </header>
         <ul>
+          <li><span>Dispatch</span><b><a href="tel:+19843976530">984-397-6530</a></b></li>
           <li><span>Cloud</span><b>Build &amp; run</b></li>
           <li><span>Networks</span><b>Administered</b></li>
           <li><span>Firewalls</span><b>Installed &amp; ruled</b></li>
@@ -677,7 +685,7 @@
     <section class="section" id="monitoring">
       <div class="wrap">
         <h2>What the night shift actually does.</h2>
-        <p class="sub">You should know who is awake. This is the shift, not a slogan.</p>
+        <p class="sub">You should know who is awake. This is the shift, not a slogan. Reach the desk at <a href="tel:+19843976530">984-397-6530</a>.</p>
         <div class="watch">
           <article>
             <h3>Watch</h3>
@@ -713,7 +721,7 @@
     <section class="section" id="scope">
       <div class="wrap">
         <h2>Request a site visit.</h2>
-        <p class="sub">Pick the work. Leave a name and phone. You get a written request on this device you can copy into a call, a text, or an email. Nothing is sent to a server from this page.</p>
+        <p class="sub">Pick the work. Leave a name and phone. This page gives you a ticket number you can read to the desk at <a href="tel:+19843976530">984-397-6530</a>. Nothing is sent to a server from this page.</p>
         <form class="scope" data-scope>
           <fieldset>
             <legend>Services</legend>
@@ -767,8 +775,10 @@
           <div class="actions">
             <button class="btn copper" type="submit">Build the request</button>
             <button class="btn secondary" type="button" data-copy hidden>Copy request</button>
+            <a class="btn secondary" href="tel:+19843976530">Call the desk</a>
           </div>
           <div class="result" data-scope-out hidden></div>
+          <div class="tickets" data-tickets></div>
         </form>
       </div>
     </section>
@@ -776,10 +786,11 @@
     <section class="section" id="google">
       <div class="wrap">
         <h2>Google, set up properly.</h2>
-        <p class="sub">We help with the business profile and Workspace. These open Google's own pages.</p>
+        <p class="sub">We help with the business profile and Workspace. These open Google's own pages. For the desk, call <a href="tel:+19843976530">984-397-6530</a>.</p>
         <div class="links">
           <a href="https://business.google.com/" target="_blank" rel="noopener noreferrer">Google Business Profile</a>
           <a href="https://workspace.google.com/business/" target="_blank" rel="noopener noreferrer">Google Workspace</a>
+          <a href="tel:+19843976530">984-397-6530</a>
         </div>
       </div>
     </section>
@@ -788,11 +799,13 @@
     <div class="wrap">
       <div class="brand-name"><b>G &amp; H IT and Home Solutions</b></div>
       <p>Since 2001. Cloud, networks, firewalls, cameras, repairs, and a monitoring desk that does not clock out.</p>
-      <p>Put your dispatch phone and email on this line when you want customers to call direct. Until then, the request form builds a brief they can hand you.</p>
+      <p><a class="phone" href="tel:+19843976530">984-397-6530</a></p>
+      <p>Call or text that number. A request built on this page stays on your device until you read the ticket to the desk.</p>
     </div>
   </footer>
   <script>
     (function () {
+      var DISPATCH = "984-397-6530";
       var toggle = document.querySelector("[data-nav-toggle]");
       var nav = document.querySelector("[data-nav]");
       if (toggle && nav) {
@@ -838,7 +851,35 @@
       var form = document.querySelector("[data-scope]");
       var out = document.querySelector("[data-scope-out]");
       var copyBtn = document.querySelector("[data-copy]");
+      var ticketBox = document.querySelector("[data-tickets]");
       var lastText = "";
+
+      function loadTickets() {
+        try { return JSON.parse(localStorage.getItem("gnh-tickets") || "[]"); }
+        catch (err) { return []; }
+      }
+      function saveTickets(list) {
+        try { localStorage.setItem("gnh-tickets", JSON.stringify(list.slice(0, 20))); } catch (err) {}
+      }
+      function renderTickets() {
+        if (!ticketBox) return;
+        var list = loadTickets();
+        ticketBox.textContent = "";
+        if (!list.length) return;
+        var h = document.createElement("h3");
+        h.textContent = "Requests on this device";
+        var ul = document.createElement("ul");
+        list.forEach(function (t) {
+          var li = document.createElement("li");
+          li.textContent = t.id + " \u00b7 " + t.name + " \u00b7 " + t.when;
+          ul.appendChild(li);
+        });
+        var note = document.createElement("p");
+        note.textContent = "Call or text " + DISPATCH + " and give them the ticket number. These stay in this browser only.";
+        ticketBox.appendChild(h);
+        ticketBox.appendChild(ul);
+        ticketBox.appendChild(note);
+      }
 
       function showResult(text, intro) {
         lastText = text;
@@ -868,8 +909,9 @@
 
       try {
         var saved = localStorage.getItem("gnh-request");
-        if (saved) showResult(saved, "Saved on this browser from your last visit. Copy it when you are ready to send.");
+        if (saved) showResult(saved, "Saved on this browser from your last visit. Call " + DISPATCH + " when you are ready to send it.");
       } catch (err) {}
+      renderTickets();
 
       if (copyBtn) {
         copyBtn.addEventListener("click", function () {
@@ -901,8 +943,12 @@
           showWarn("Name and phone are required so someone can call you back.");
           return;
         }
+        var id = "GH-" + String(Date.now()).slice(-6);
+        var when = new Date().toLocaleString([], { month: "short", day: "numeric", hour: "numeric", minute: "2-digit" });
         var lines = [
           "G & H service request",
+          "Ticket: " + id,
+          "Dispatch: " + DISPATCH,
           "Name: " + name,
           "Phone: " + phone
         ];
@@ -918,7 +964,11 @@
         if (notes) lines.push("Notes: " + notes);
         var text = lines.join("\n");
         try { localStorage.setItem("gnh-request", text); } catch (err) {}
-        showResult(text, "Kept on this device only. Copy it and send it to G & H by phone, text, or email.");
+        var list = loadTickets();
+        list.unshift({ id: id, name: name, when: when });
+        saveTickets(list);
+        renderTickets();
+        showResult(text, "Ticket " + id + " is on this device only. Call or text " + DISPATCH + " and read it to the desk.");
         if (copyBtn) copyBtn.textContent = "Copy request";
         out.scrollIntoView({ block: "nearest" });
       });
